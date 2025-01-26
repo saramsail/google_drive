@@ -1,0 +1,10 @@
+@use '../custom' as *;
+
+.menu{
+    ul{
+        button{
+            border-color: $gray-300 ;
+            padding: 0rem 1rem 0rem 1rem;
+        }
+    }
+}

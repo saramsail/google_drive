@@ -1,0 +1,101 @@
+@use '../custom' as *;
+
+$primary-color: #0070d2; // Example Salesforce blue color
+$text-color: #333; 
+$brand-logo-width: 80px; // Adjust for logo sizes
+
+.testimonials{
+    position: relative;
+    margin-bottom: 7rem;
+    background-color: $gray-200;
+  h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: $text-color;
+    padding-top: 4rem;
+    font-size: 2rem;
+  }
+
+  .brand-logo {
+    max-width: 100%;
+    margin: auto;
+    display: block;
+    padding: 10px; // Adjust spacing around logos
+  }
+
+  .testimonial-section {
+    .salesforce-logo img {
+      max-width: 100px;
+      margin-bottom: 10px;
+    }
+
+    .quote {
+      font-size: 1.1rem;
+      font-style: italic;
+      margin-bottom: 15px;
+      color: $text-color;
+    }
+
+    .read-story-link {
+      color: $primary-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+
+  .carousel-indicators {
+    button {
+      width: 10px; // Circle diameter
+      height: 10px;
+      background-color: #ccc; // Default dot color
+      border-radius: 50%; // Makes the buttons circular
+      border: none; // Removes default button border
+      margin: 0 5px; // Adds spacing between dots
+      transition: background-color 0.3s; // Smooth transition for color change
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+
+    .active {
+      background-color: $primary-color; // Active dot color (blue)
+    }
+  }
+  &__card{
+    background-color: rgba($white, 0.8);
+    padding: 2rem 1.25rem;
+    border-radius: 0.625rem;
+    height: auto;
+    text-align: center;
+    box-shadow: #333;
+  }
+  &__picture{
+    width: 8rem;
+    height: 8rem;
+    margin-left: 50%;
+    margin-top: 3rem;
+    padding-top: 5rem;
+    transform: translate(-50%, -50%);
+  }
+  &__name{
+    font-size: 1.2rem;
+    
+    a{
+        font-size: 1rem;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }    
+ }
+ &--img {
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  mix-blend-mode: color-burn;
+}
+} 

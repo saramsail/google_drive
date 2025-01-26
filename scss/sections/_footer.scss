@@ -1,0 +1,60 @@
+@use '../custom' as *;
+
+.footer {
+    background-color: $gray-100;
+    &--icons {
+      i {
+        font-size: 1.3rem; // Icon size
+        color: #333; // Default icon color
+        transition: color 0.3s ease-in-out; // Smooth color transition on hover
+  
+        &:hover {
+          color: $primary; // Change to your desired hover color (e.g., blue)
+        }
+      }
+    }
+    &--bottom{
+        a{
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: $gray-600;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 0.9rem;
+            &:hover{
+                color: $primary;
+            }
+        }
+    }
+    &--help{
+        a{
+            color: $gray-600;
+            font-family: "Roboto", sans-serif;
+            margin-right: 2rem;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.9rem;
+            &:hover{
+                color: $primary;
+                text-decoration: underline;
+            }
+        }
+    }
+    &--last{
+        margin-top: 0.1rem;
+        li{
+            list-style: none;
+            a{
+                color: $gray-600;
+                font-family: "Roboto", sans-serif;
+                font-weight: 400;
+                font-size: 0.9rem;
+                &:hover{
+                    color: $primary;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+  

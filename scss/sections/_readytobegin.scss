@@ -1,0 +1,14 @@
+
+
+@use '../custom' as *;
+
+
+.readytobegin{
+    &--content{
+        margin-top: 6rem;
+        
+    }
+    &--pic{
+        margin-top: 5rem;
+    }
+}

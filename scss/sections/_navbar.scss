@@ -1,0 +1,36 @@
+@use '../custom' as *;
+  
+
+.menu {
+    font-family: "Roboto", sans-serif;
+    li {
+      padding: 0.3rem 0rem;
+      padding-left: 0.5rem;
+      a {
+        position: relative; // Required for pseudo-elements  
+        &::before {
+          content: '';
+          position: absolute;
+          width: 0; // Start with no width
+          height: 2px; // Line thickness
+          bottom: 0; // Position below text
+          left: 0; // Start from the left
+          background-color: $primary; // Line color
+          transition: width 0.3s ease; // Smooth transition for width
+        }
+  
+        &:hover {
+          color: $primary; // Change text color on hover
+  
+          &::before {
+            width: 100%; // Expand line to full width on hover
+          }
+        }
+      }
+    }
+    .underline{
+        color: $primary;
+    }
+}
+
+  
